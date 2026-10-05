@@ -26,9 +26,8 @@ jobs:
       - name: Check formatting
         run: npm run format:check
 
-    docker:
+  docker:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out the code
         uses: actions/checkout@v7
@@ -36,12 +35,11 @@ jobs:
       - name: Build the production image
         run: docker build --target production -t notes-app .
 
-          frontend:
+  frontend:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: frontend
-
     steps:
       - name: Check out the code
         uses: actions/checkout@v7
