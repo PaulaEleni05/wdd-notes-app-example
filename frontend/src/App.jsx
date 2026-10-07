@@ -13,6 +13,9 @@ function App() {
 
   useEffect(load, []);
 
+  const count = notes.length;
+
+
   function submit(event) {
     event.preventDefault();
 
